@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio | Wibizuharkho</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <!-- ================ AWAL NAVBAR ================ -->
+    <header>
+      <a href="#" class="Logo">Portfolio</a>
+      <div class="menuToggle"></div>
+      <ul class="nav">
+        <li class="active"><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </header>
+    <section id="home">
+      <div class="content">
+        <h2>M. Alief Wibizuharkho</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia aut nostrum dolorum modi quas doloribus aliquid ratione eum fugit consectetur molestias eligendi, libero quaerat consequuntur necessitatibus! Fugit veritatis optio
+          animi.
+        </p>
+        <a href="#" class="btn">Contact Me</a>
+      </div>
+      <img src="\images\men.png" class="men" />
+    </section>
+    <section id="services">
+      <div class="secText">
+        <h2>What Iam Great At</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptatem aliquam amet atque consequatur perspiciatis ducimus molestiae ullam, eius sint, ea dolorum harum tenetur molestias.</p>
+      </div>
+      <div class="content">
+        <div class="servicesBx">
+          <img src="\images\icon1.png" />
+          <h3>Website Designing</h3>
+        </div>
+        <div class="servicesBx">
+          <img src="\images\icon2.png" />
+          <h3>Web Development</h3>
+        </div>
+        <div class="servicesBx">
+          <img src="\images\icon3.png" />
+          <h3>Android Apps</h3>
+        </div>
+        <div class="servicesBx">
+          <img src="\images\icon4.png" />
+          <h3>Video Editing</h3>
+        </div>
+      </div>
+      <div class="center">
+        <a href="#" class="btn">Hire Me</a>
+      </div>
+    </section>
+    <section id="portfolio">
+      <div class="secText">
+        <h2>My Masterpiece Collection</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptatem aliquam amet atque consequatur perspiciatis ducimus molestiae ullam, eius sint, ea dolorum harum tenetur molestias.</p>
+      </div>
+      <div class="center">
+        <a href="#" class="btn">View More</a>
+      </div>
+      <div class="content">
+        <div class="imgBx">
+          <img src="images/img1.jpg" />
+        </div>
+        <div class="imgBx">
+          <img src="images/img2.jpg" />
+        </div>
+        <div class="imgBx">
+          <img src="images/img3.jpg" />
+        </div>
+        <div class="imgBx">
+          <img src="images/img4.jpg" />
+        </div>
+        <div class="imgBx">
+          <img src="images/img5.jpg" />
+        </div>
+        <div class="imgBx">
+          <img src="images/img6.jpg" />
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="secText">
+        <h2>Ways To Contact Me</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptatem aliquam amet atque consequatur perspiciatis ducimus molestiae ullam, eius sint, ea dolorum harum tenetur molestias.</p>
+      </div>
+      <div class="content">
+        <a href="#"><ion-icon name="call-outline"></ion-icon>harkhozu24@gmail.com </a>
+        <a href="#"><ion-icon name="logo-whatsapp"></ion-icon> +6281268518521 </a>
+        <a href="#"><ion-icon name="logo-linkedin"></ion-icon>www.linkedin.com/in/wibizuharkho</a>
+        <a href="#"><ion-icon name="logo-github"></ion-icon>github.com/wibizuharkho </a>
+      </div>
+      <div class="center">
+        <p class="copyrights">Copyright © 2023 <a href="#">Online Tutorials</a>. All Right Reserved</p>
+      </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+      let list = document.querySelectorAll('.nav li');
+      function active() {
+        list.forEach((i) => i.classList.remove('active'));
+        this.classList.add('active');
+      }
+      list.forEach((i) => i.addEventListener('click', active));
+
+      let menuToggle = document.querySelector('.menuToggle');
+      let header = document.querySelector('header');
+      menuToggle.onclick = function () {
+        header.classList.toggle('active');
+      };
+    </script>
+  </body>
+</html>
