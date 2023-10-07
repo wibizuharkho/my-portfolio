@@ -21,7 +21,7 @@
     <section id="home">
       <div class="content">
         <h2>M. Alief Wibizuharkho</h2>
-        <p>A Developer who tend to create more than just cool web and desktop App, but also useful and comfort to be used. Creativity is always enough in terms to encourage myself to enhance the productivity that is non-boring.</p>
+        <p>A Developer who tend to create more than just cool web and desktop App, but also usefull and comfort to be used. Creativity is always enough in terms to encourage myself to enhance the productivity in non-boring ways.</p>
         <div class="horzon">
           <a href="#" class="btn">VB. Net</a>
           <a href="#" class="btn">C#</a>
@@ -46,11 +46,11 @@
       </div>
       <div class="content">
         <div class="servicesBx">
-          <img src="\images\monitor.png" />
+          <img src="/images/monitor.png" />
           <h3>Desktop Application</h3>
         </div>
         <div class="servicesBx">
-          <img src="\images\icon2.png" />
+          <img src="/images/icon2.png" />
           <h3>Web Development</h3>
         </div>
         <!-- <div class="servicesBx">
@@ -86,24 +86,35 @@
           </div>
         </div>
 
-        <!--
         <div class="imgBx">
-          <img src="images/img2.jpg" />
+          <img src="images/cov_LibVisLog.png" />
+          <div class="info">
+            <h1>Library Visitor Log</h1>
+            <p>A Web App that record your incoming library visitor.</p>
+            <a onclick="tunjuk()" class="btn-demo">Demo</a>
+
+            <!-- <div class="video-container">
+              <span class="close">&#10006;</span>
+              <video src="images/LibraryVisitorLog.mp4" controls></video>
+            </div> -->
+          </div>
         </div>
-        <div class="imgBx">
-          <img src="images/img3.jpg" />
-        </div>
-        <div class="imgBx">
-          <img src="images/img4.jpg" />
-        </div>
-        <div class="imgBx">
-          <img src="images/img5.jpg" />
-        </div>
-        <div class="imgBx">
-          <img src="images/img6.jpg" />
-        </div> -->
       </div>
     </section>
+
+    <div class="popup">
+      <span class="close" onclick="tunjuk()">&#10006;</span>
+      <video src="/images/LibraryVisitorLog.mp4" controls="true"></video>
+    </div>
+    <!-- SECTION KHUSUS POPUP -->
+    <!-- <section id="popup-sec">
+      <div class="popup">
+        <p>HALO DARI MACAN AUNG YUKAJSIF KSHK KSKKKS AL S.</p>
+        <video src="/images/LibraryVisitorLog.mp4" controls="true"></video>
+      </div>
+    </section> -->
+    <!-- AKHIR DARI POPUP -->
+
     <section id="contact">
       <div class="secText">
         <h2>Ways To Contact Me</h2>
@@ -119,8 +130,16 @@
         <p class="copyrights">Copyright © 2023 <a href="#">Wibizuharkho</a>. All Right Reserved</p>
       </div>
     </section>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+      // Fungsi Video show dan close
+      function tunjuk() {
+        var popup = document.querySelector('.popup');
+        var video = document.querySelector('video');
+        popup.classList.toggle('touch');
+        video.pause();
+        video.currentTime = 0;
+      }
+    </script>
     <script>
       let list = document.querySelectorAll('.nav li');
       function active() {
@@ -135,5 +154,9 @@
         header.classList.toggle('active');
       };
     </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </body>
+
+  <!-- TAMBAHKAN FUNGSI PAUSE VIDEO PAS CLOSE -->
 </html>

@@ -16,7 +16,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10000;
+  z-index: 100;
   backdrop-filter: blur(20px);
 }
 header .Logo {
@@ -260,9 +260,10 @@ header ul li:hover a {
 #portfolio .content {
   display: grid;
   justify-content: center;
-  /* grid-template-columns: repeat(1, 1fr); */
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
   margin: 40px 0;
+  padding: 0px 400px;
 }
 #portfolio .content .imgBx {
   width: 280px;
@@ -333,13 +334,102 @@ header ul li:hover a {
   border-radius: 5px;
   padding: 0.2rem 1rem;
   border: none;
-  background: #63899e;
+  background: #2e54a8;
   color: #000;
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
   transition: 0.4s ease-in-out;
 }
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999;
+}
+.popup.touch {
+  visibility: visible;
+  opacity: 1;
+}
+.popup .close {
+  position: fixed;
+  top: 5%;
+  right: 6%;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.popup video {
+  position: absolute;
+  max-width: 900px;
+  outline: none;
+  box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.4);
+}
+
+.btn-demo {
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 0.2rem 1rem;
+  border: none;
+  background: #2e54a8;
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+/* .video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  background-color: rgba(255, 122, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.video-container .close {
+  position: absolute;
+  top: 10%;
+  right: 25px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.video-container video {
+  width: 90%;
+  max-width: 800px;
+  transition: scale(0);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+  outline: none;
+  transition: all 0.3s;
+}
+
+.video-container.show {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.video-container.show video {
+  transform: scale(1);
+} */
+
 /* #portfolio .content .imgBx {
   position: relative;
   text-align: center;
