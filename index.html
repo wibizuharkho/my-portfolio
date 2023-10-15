@@ -99,9 +99,19 @@
             </div> -->
           </div>
         </div>
+
+        <div class="imgBx">
+          <img src="./images/cov_EMS.png" />
+          <div class="info">
+            <h1>Employee Management System</h1>
+            <p>A Web App that record your employees information.</p>
+            <a onclick="tunjuk2()" class="btn-demo">Demo</a>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- SECTION KHUSUS POPUP -->
     <div class="popup">
       <span class="close" onclick="tunjuk()">&#10006;</span>
       <video controls autoplay muted>
@@ -109,13 +119,14 @@
       </video>
       <!-- <video src="https://media.githubusercontent.com/media/wibizuharkho/wibizuharkho.github.io/main/images/LibraryVisitorLog.mp4" controls="true"></video> -->
     </div>
-    <!-- SECTION KHUSUS POPUP -->
-    <!-- <section id="popup-sec">
-      <div class="popup">
-        <p>HALO DARI MACAN AUNG YUKAJSIF KSHK KSKKKS AL S.</p>
-        <video src="/images/LibraryVisitorLog.mp4" controls="true"></video>
-      </div>
-    </section> -->
+
+    <div class="popup2">
+      <span class="close" onclick="tunjuk2()">&#10006;</span>
+      <video controls muted>
+        <source type="video/mp4" src="./videos/EMS_sm.mp4" />
+      </video>
+    </div>
+
     <!-- AKHIR DARI POPUP -->
 
     <section id="contact">
@@ -126,7 +137,7 @@
       <div class="content">
         <a><ion-icon name="mail-outline"></ion-icon>harkhozu24@gmail.com </a>
         <a><ion-icon name="logo-whatsapp"></ion-icon> +6281268518521 </a>
-        <a href="https://linkedin.com/in/wibizuharkho"><ion-icon name="logo-linkedin"></ion-icon>wibizuharkho</a>
+        <a href="https://www.linkedin.com/in/wibizuharkho"><ion-icon name="logo-linkedin"></ion-icon>wibizuharkho</a>
         <a href="https://github.com/wibizuharkho"><ion-icon name="logo-github"></ion-icon>wibizuharkho </a>
       </div>
       <div class="center">
@@ -138,6 +149,14 @@
       function tunjuk() {
         var popup = document.querySelector('.popup');
         var video = document.querySelector('video');
+        popup.classList.toggle('touch');
+        video.pause();
+        video.currentTime = 0;
+      }
+
+      function tunjuk2() {
+        var popup = document.querySelector('.popup2');
+        var video = document.querySelector('.popup2 video');
         popup.classList.toggle('touch');
         video.pause();
         video.currentTime = 0;
